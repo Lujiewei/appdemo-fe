@@ -9,13 +9,11 @@ work_dir="/home/buercorp"
 work_home="${work_dir}/repository/appdemo-fe"
 
 # 存放打包后的代码
-js_home="${work_dir}/apps/nginx/appdemo-web"
+web_home="${work_dir}/deploy/appdemo-fe"
 
-# 源码目录
-code_home="${work_dir}/repository"
 
 # Git仓库地址
-git_repo="https://github.com/175T/appdemo-be.git"
+git_repo="https://gitee.com/nancheng-p/appdemo-fe.git"
 
 if [ -d "$work_home" ]; then
     echo "— — 工作目录存在 — —"
@@ -24,10 +22,12 @@ if [ -d "$work_home" ]; then
     git pull origin master
     echo "— — — — 项目已更新— — — —"
 else
-    echo "未检测到需要打包的api"
+    mkdir -p "$work_home"
     echo "正在为你拉取最新的项目"
-    git clone $git_repo "$code_home"
+    git clone $git_repo "$work_home"
     echo "— — 项目已克隆— — — —"
+
+
 fi
 
 cd "$work_home/source"
@@ -37,4 +37,4 @@ echo "依赖库已经安装完成"
 npm run build
 echo "项目已打包"
 
-mv "$work_home/source/dist" "$js_home"
+mv "$work_home/source/dist" "$web_home"
