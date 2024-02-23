@@ -25,14 +25,16 @@ if [ -d "$work_home" ]; then
     git reset --hard HEAD
     echo "— — 正在更新项目... — —"
     git pull origin master
+    cd "$work_home/scripts"
+    find . -type f -name "*.sh" -exec sudo chmod +x {} \;
     echo "— — — — 项目已更新— — — —"
 else
     mkdir -p "$code_home"
     echo "正在为你拉取最新的项目"
     git clone $git_repo "$code_home"
+    cd "$work_home/scripts"
+    find . -type f -name "*.sh" -exec sudo chmod +x {} \;
     echo "— — 项目已克隆— — — —"
-
-
 fi
 
 cd "$work_home/source"
