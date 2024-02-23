@@ -6,7 +6,7 @@ cd /home/buercorp
 wget --no-check-certificate https://nginx.org/download/nginx-1.24.0.tar.gz
 tar xvf nginx-1.24.0.tar.gz -C downloads
 rm nginx-1.24.0.tar.gz
-cd nginx-1.24.0
+cd downloads/nginx-1.24.0
 wget --no-check-certificate https://www.openssl.org/source/openssl-3.0.12.tar.gz
 tar xvf openssl-3.0.12.tar.gz
 rm openssl-3.0.12.tar.gz
