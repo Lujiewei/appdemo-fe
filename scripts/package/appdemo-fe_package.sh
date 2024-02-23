@@ -31,10 +31,10 @@ else
 fi
 
 cd "$work_home/source"
-npm install
+/home/buercorp/apps/node-v18.12.1/bin/npm install
 echo "依赖库已经安装完成"
 
-npm run build
+/home/buercorp/apps/node-v18.12.1/bin/npm run build
 echo "项目已打包"
 
 mv "$work_home/source/dist" "$web_home"

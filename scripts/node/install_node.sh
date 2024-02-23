@@ -10,7 +10,7 @@ tar xvf node-v18.12.1-linux-x64.tar.gz
 rm /home/buercorp/apps/node-v18.12.1-linux-x64.tar.gz
 
 ln -sf node-v18.12.1 node
-echo "export PATH=$PATH:/home/lu-jiewei/apps/node/bin" >> /etc/profile
-source /etc/profile
+# echo "export PATH=$PATH:/home/lu-jiewei/apps/node/bin" >> /etc/profile
+# source /etc/profile
 
-echo "node安装成功"
+echo "node.js安装成功"
