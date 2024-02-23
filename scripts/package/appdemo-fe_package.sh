@@ -41,4 +41,4 @@ echo "依赖库已经安装完成"
 /home/buercorp/apps/node-v18.12.1/bin/npm run build
 echo "项目已打包"
 
-mv "$work_home/source/dist" "$web_home"
+sudo mv "$work_home/source/dist" "$web_home"
