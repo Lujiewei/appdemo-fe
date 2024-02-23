@@ -8,6 +8,10 @@ work_dir="/home/buercorp"
 # 项目目录
 work_home="${work_dir}/repository/appdemo-fe"
 
+# 源码目录
+
+code_home="${work_dir}/repository"
+
 # 存放打包后的代码
 web_home="${work_dir}/deploy/appdemo-fe"
 
@@ -22,9 +26,9 @@ if [ -d "$work_home" ]; then
     git pull origin master
     echo "— — — — 项目已更新— — — —"
 else
-    mkdir -p "$work_home"
+    mkdir -p "$code_home"
     echo "正在为你拉取最新的项目"
-    git clone $git_repo "$work_home"
+    git clone $git_repo "$code_home"
     echo "— — 项目已克隆— — — —"
 
 
