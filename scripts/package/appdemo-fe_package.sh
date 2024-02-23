@@ -22,6 +22,7 @@ git_repo="https://gitee.com/nancheng-p/appdemo-fe.git"
 if [ -d "$work_home" ]; then
     echo "— — 工作目录存在 — —"
     cd "$work_home"
+    git reset --hard HEAD
     echo "— — 正在更新项目... — —"
     git pull origin master
     echo "— — — — 项目已更新— — — —"
@@ -35,10 +36,10 @@ else
 fi
 
 cd "$work_home/source"
-/home/buercorp/apps/node-v18.12.1/bin/npm install
+/home/buercorp/apps/node/bin/npm install
 echo "依赖库已经安装完成"
 
-/home/buercorp/apps/node-v18.12.1/bin/npm run build
+/home/buercorp/apps/node/bin/npm run build
 echo "项目已打包"
 
 sudo mv "$work_home/source/dist" "$web_home"
