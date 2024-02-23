@@ -15,6 +15,6 @@ make
 make install
 
 cd /home/buercorp/apps
-ln -s nginx-1.24.0 nginx
+sudo ln -s nginx-1.24.0 nginx
 
 #/sbin/setcap 'cap_net_bind_service=+ep' /home/buercorp/apps/nginx/sbin/nginx
