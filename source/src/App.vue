@@ -4,7 +4,6 @@ import { RouterView } from 'vue-router'
 
 <template>
   <router-view />
-  <main></main>
 </template>
 
 <style lang="less">

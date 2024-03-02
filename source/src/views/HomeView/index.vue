@@ -1,4 +1,5 @@
 <template>
+  <div>
   <div class="headerbg product-imgs">
     <div class="fixed">
       <header class="cf">
@@ -152,11 +153,12 @@
     <h1>Home{{ store.counte }}</h1>
     <button @click="store.increment">++</button>
   </div>
+</div>
 </template>
 
 <script lang="ts" setup>
 import NavView from '@/components/NavView.vue'
-import { useCounterStore } from '@/store/index'
+import { useCounterStore } from '@/stores/index'
 const store = useCounterStore()
 </script>
 <style lang="less" scoped>
@@ -757,3 +759,4 @@ footer .info {
   padding-top: 40px;
 }
 </style>
+@/stores/index
